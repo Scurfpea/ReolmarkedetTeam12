@@ -25,6 +25,7 @@ namespace ReolmarkedetTeam12
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Controller con = new Controller();
         bool CorrectPhone, CorrectDate, CorrectWeeks;
         string name, email, phone, date, weeks;
         int phoneInt, weeksInt;
@@ -114,8 +115,14 @@ namespace ReolmarkedetTeam12
         }
         void CreateNewRenter()
         {            
-            Debug.WriteLine(@"{0}, {1}, {2} {3} {4}", name, email, phoneInt, dateDateTime, weeks); //check if it works.
+            //Debug.WriteLine(@"{0}, {1}, {2} {3} {4}", name, email, phoneInt, dateDateTime, weeks); //check if it works.
             MessageBox.Show("Din booking er godkendt");
+            //con.AddToList(SalesRackRenter(name, email,phone));
+            SalesRackRenter newRenter = new SalesRackRenter(name, email, phoneInt);
+            //con.SalesRackRenterList.Add(newRenter);
+            con.AddToList(newRenter = new SalesRackRenter(name, email, phoneInt));
+
+           
         }
     }
 }
