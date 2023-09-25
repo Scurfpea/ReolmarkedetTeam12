@@ -73,7 +73,7 @@ namespace ReolmarkedetTeam12
             weeks = WeeksTxt.Text;
 
             if (Int32.TryParse(phone, out int phoneInt))
-            {
+            {                
                 Debug.WriteLine($"Was able to parse '{phone}'");
                 CorrectPhone = true;               
             }
@@ -118,11 +118,10 @@ namespace ReolmarkedetTeam12
             //Debug.WriteLine(@"{0}, {1}, {2} {3} {4}", name, email, phoneInt, dateDateTime, weeks); //check if it works.
             MessageBox.Show("Din booking er godkendt");
             //con.AddToList(SalesRackRenter(name, email,phone));
-            SalesRackRenter newRenter = new SalesRackRenter(name, email, phoneInt);
-            //con.SalesRackRenterList.Add(newRenter);
-            con.AddToList(newRenter = new SalesRackRenter(name, email, phoneInt));
-
-           
+            SalesRackRenter newRenter = new SalesRackRenter(name, email, int.Parse(phone));            
+            con.AddToList(newRenter);
+            Booking booking = new Booking(dateDateTime, int.Parse(weeks));
+            con.AddToList(booking);
         }
     }
 }
