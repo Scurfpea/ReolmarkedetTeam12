@@ -98,7 +98,7 @@ namespace ReolmarkedetTeam12
                 WeeksTxt.Text = ""; //Clear the error.
             }
 
-            var dateDateTimeVar = DateTime.Parse(date, new CultureInfo("en-US", true)); //'MM/dd/yyyy' forma
+            var dateDateTimeVar = DateTime.Parse(date, new CultureInfo("en-GB", true)); //'dd/mm/yyyy' format
             dateDateTime = dateDateTimeVar;
 
             //if (!DateTime.TryParse(date, out dateDateTime))
