@@ -111,13 +111,11 @@ namespace ReolmarkedetTeam12
             {
                 CreateNewRenter();
             }
-
         }
         void CreateNewRenter()
         {            
             //Debug.WriteLine(@"{0}, {1}, {2} {3} {4}", name, email, phoneInt, dateDateTime, weeks); //check if it works.
-            MessageBox.Show("Din booking er godkendt");
-            //con.AddToList(SalesRackRenter(name, email,phone));
+            MessageBox.Show("Din booking er godkendt");            
             SalesRackRenter newRenter = new SalesRackRenter(name, email, int.Parse(phone));            
             con.AddToList(newRenter);
             Booking booking = new Booking(dateDateTime, int.Parse(weeks));

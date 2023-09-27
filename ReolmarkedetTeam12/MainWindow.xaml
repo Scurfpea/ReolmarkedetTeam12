@@ -6,20 +6,19 @@
         xmlns:local="clr-namespace:ReolmarkedetTeam12"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="#FF8A8A8A">
         <TextBox x:Name="NameTxt" HorizontalAlignment="Left" Margin="320,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Name_TextChanged" RenderTransformOrigin="-0.25,73.332"/>
-        <Label Content="Email" HorizontalAlignment="Left" Margin="197,164,0,0" VerticalAlignment="Top"/>
-        <Label Content="Tfl. nr" HorizontalAlignment="Left" Margin="197,217,0,0" VerticalAlignment="Top"/>
-        <Label Content="Start dato" HorizontalAlignment="Left" Margin="197,273,0,0" VerticalAlignment="Top"/>
-        <Label Content="Antal uger" HorizontalAlignment="Left" Margin="197,318,0,0" VerticalAlignment="Top"/>
-        <Label Content="Navn" HorizontalAlignment="Left" Margin="197,119,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="250,164,0,0" VerticalAlignment="Top"/>
+        <Label Content="Tfl. nr" HorizontalAlignment="Left" Margin="250,217,0,0" VerticalAlignment="Top"/>
+        <Label Content="Start dato" HorizontalAlignment="Left" Margin="250,273,0,0" VerticalAlignment="Top"/>
+        <Label Content="Antal uger" HorizontalAlignment="Left" Margin="250,318,0,0" VerticalAlignment="Top"/>
+        <Label Content="Navn" HorizontalAlignment="Left" Margin="250,119,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="PhoneTxt" HorizontalAlignment="Left" Margin="320,217,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Phone_TextChanged"/>
-        <TextBox x:Name="EmailTxt" HorizontalAlignment="Left" Margin="320,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Email_TextChanged"/>
-        <TextBox x:Name="DateTxt" HorizontalAlignment="Left" Margin="320,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Date_TextChanged" Text="dd/mm/yyyy"/>
+        <TextBox x:Name="EmailTxt" HorizontalAlignment="Left" Margin="320,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Email_TextChanged"/>
+        <TextBox x:Name="DateTxt" HorizontalAlignment="Left" Margin="320,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Date_TextChanged" Text="DD/MM/ÅÅÅÅ"/>
         <TextBox x:Name="WeeksTxt" HorizontalAlignment="Left" Margin="320,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Weeks_TextChanged"/>
-        <Button Content="Book" HorizontalAlignment="Left" Margin="305,384,0,0" VerticalAlignment="Top" Width="50" Click="Button_Click"/>
-        <Label Content="Book en reol" HorizontalAlignment="Left" Margin="278,59,0,0" VerticalAlignment="Top"/>
-        <ScrollBar HorizontalAlignment="Left" Margin="468,310,0,0" VerticalAlignment="Top" Value="-7"/>
+        <Button Content="Book" HorizontalAlignment="Left" Margin="320,364,0,0" VerticalAlignment="Top" Width="80" Click="Button_Click" Background="#FF009CFF" Height="30" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Book reol" HorizontalAlignment="Left" Margin="320,59,0,0" VerticalAlignment="Top" Height="35" Width="172" FontSize="18"/>
 
     </Grid>
 </Window>
