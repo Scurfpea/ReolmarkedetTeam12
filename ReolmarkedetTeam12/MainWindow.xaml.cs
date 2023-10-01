@@ -61,8 +61,15 @@ namespace ReolmarkedetTeam12
         public MainWindow()
         {
             InitializeComponent();
+            SalesRack salesRack2 = new SalesRack();
+            Controller.AddToList(salesRack2);
+            SalesRackRenter srr1 = new SalesRackRenter("Rasmus", "r@j.dk", 27);
+            SalesRackRenter srr2 = new SalesRackRenter("Katrine", "k@j.dk", 28);
+            //Console.WriteLine(SalesRackRenter.BookAStorage("2023-09-28", 2));
+            //Console.WriteLine(SalesRackRenter.BookAStorage("2023-09-28", 2));
+            //Console.WriteLine(SalesRackRenter.BookAStorage("2023-09-28", 2));
+            //Console.WriteLine(SalesRackRenter.BookAStorage("2023-09-28", 2));
         }
-      
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -101,12 +108,6 @@ namespace ReolmarkedetTeam12
             var dateDateTimeVar = DateTime.Parse(date, new CultureInfo("en-GB", true)); //'dd/mm/yyyy' format
             dateDateTime = dateDateTimeVar;
 
-            //if (!DateTime.TryParse(date, out dateDateTime))
-            //{
-            //    MessageBox.Show("Ikke korrekt værdi. Prøv igen");
-            //}
-
-
             if (CorrectPhone && CorrectWeeks && name != null && email != null && date != null) //missing proper date check
             {
                 CreateNewRenter();
@@ -118,8 +119,11 @@ namespace ReolmarkedetTeam12
             MessageBox.Show("Din booking er godkendt");            
             SalesRackRenter newRenter = new SalesRackRenter(name, email, int.Parse(phone));            
             con.AddToList(newRenter);
-            Booking booking = new Booking(dateDateTime, int.Parse(weeks));
-            con.AddToList(booking);
+            
+            //DateTime endDate = dateDateTime.AddDays(weeksInt*7);
+            //int BookingId = Controller.BookingList.Count + 1;
+            //Booking booking = new Booking(BookingId, dateDateTime, endDate);
+            //con.AddToList(booking);
         }
     }
 }
