@@ -13,11 +13,12 @@ namespace ReolmarkedetTeam12
         public bool AvailabilityStatus { get; set; }
         //public string? CurrentRenter { get; set; }
 
-        public SalesRack(int salesRackId, string type, bool availabilityStatus)
+        public SalesRack()
         {
-            this.SalesRackId = salesRackId;
-            this.Type = type;
-            this.AvailabilityStatus = availabilityStatus;
+            SalesRackId = Controller.SalesRackList.Count + 1;
+            Type = "Standard";
+            AvailabilityStatus = true;
+
         }
         public static string SalesRackToAvailable(SalesRack salesRack)
         {
